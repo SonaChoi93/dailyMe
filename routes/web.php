@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\SampleController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,6 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('sample/{type}',[SampleController::class, 'show']);
+
 Route::get('/', function () {
-    return view('welcome');
+    return view('layouts.master');
 });
