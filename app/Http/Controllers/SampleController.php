@@ -45,8 +45,11 @@ class SampleController extends Controller
      */
     public function show($type)
     {
-        return view('page.index',[
-            'type' => $type
+        $view = 'main';
+        $view = $type;
+
+        return view($view.'.index',[
+            'type' => $type,
         ]);
     }
 
